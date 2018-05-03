@@ -1,0 +1,35 @@
+name: Schletter 2017
+markdown: kramdown
+title: Schletter Group
+description: Schletter is North America’s leading provider of solar mounting systems for utility-scale PV plants, commercial and residential PV installations, and PV carports.
+url: https://www.schletter.us
+baseurl: ""
+author: Schletter North America
+twitter: 
+  username: schletterinc
+facebook:
+  app_id: 
+  publisher:
+  admins:
+  social:
+    name: Schletter Inc.
+    links:
+      - https://twitter.com/schletterinc
+      - https://facebook.com/SchletterInc
+logo: /images/schletter-group_logo.svg
+plugins:
+  - jekyll-seo-tag
+layouts_dir:     _layouts
+data_dir:        _data
+includes_dir:    _includes
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+  show_warnings:  false
+  permalink: /blog/:categories/:year/:month/:day/:title.html
+  excerpt_separator: "<!--excerpt-->"

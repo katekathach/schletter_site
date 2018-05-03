@@ -1,0 +1,755 @@
+
+/* Links und Schrift */
+body, p, .inhalt_start td, .inhalt td{color:#464646;font-family:lato, sans-serif;font-size:14px;font-style:normal;line-height:1.5;margin: 0;}
+#inhalt_start li, #inhalt li{margin-left:1em; list-style-position: outside;}
+thead td{background:#004628;text-indent:5px;color:#fff;font-weight:bold;}
+.inhalt_start tbody td, .inhalt tbody td{padding:5px;}
+a:link{color:#004628;text-decoration:none;}
+a:visited{color:#004628;text-decoration:none;}
+a:focus{color:#004628;text-decoration:underline;}
+a:hover{color:#aaa;text-decoration:none;}
+a:active{font-weight:normal;color:#aaa;}
+h1,#inhalt .bopplheader h1{font-family:Arial, Helvetica, sans-serif;font-size:20px;color:#004628;margin:0;padding-bottom:5px;padding-right:0;font-weight:bold;}
+#inhalt .tinymcewysiwyg h1{border-bottom:none;}
+h2{font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#004628;margin:0;padding-top:8px;padding-right:0;padding-bottom:8px;padding-left:0px;font-weight:bold;}
+h3{font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#004628;margin:0;padding-top:3px;padding-right:0;padding-bottom:3px;padding-left:0px;font-weight:bold;}
+/*.tinymcewysiwyg h3 { margin: 0px 20px 0px 2px;}*/
+.tinymcewysiwyg h3 { margin: 0px 0px 0px 0px;}
+.footer_links_inner h3 a{font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#004628;margin:0;padding-top:3px;padding-right:0;padding-bottom:3px;padding-left:0px;font-weight:bold;}
+h4{font-family:Arial, Helvetica, sans-serif;font-size:13px;color:#004628;margin:0;padding-top:3px;padding-right:0;padding-bottom:3px;padding-left:0px;font-weight:bold;}
+h5{font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#004628;margin:0;padding-top:3px;padding-right:0;padding-bottom:3px;padding-left:0px;font-weight:bold;}
+h6{font-family:Arial, Helvetica, sans-serif;font-size:11px;color:#004628;margin:0;padding-top:3px;padding-right:0;padding-bottom:3px;padding-left:0px;font-weight:bold;}
+
+.fliesstext_grau{color:#464646;font-size:12px;line-height:16px;text-align:left;}
+.nameline{padding-left:20px;padding-top:40px;}
+.nameliner_balken{background:url('nameliner_balken_910x25px.png')no-repeat;padding-right:19px;padding-left:20px;color:#004628;line-height:25px;font-weight:bold;font-size:14px;margin-bottom:10px;visibility:hidden;}
+.nameliner_balken input{height:15px;}
+/* Downloadmodul */
+.download-hdl-holder{width:735px;border:1px solid #888;background:#004628;margin-left:80px;margin-right:0px;margin-top:0px;margin-bottom:-20px;padding:5px;vertical-align:middle;}
+.download-hdl{font-family:Arial, Helvetica, sans-serif;font-size:15px;font-weight:bold;color:#fff;vertical-align:middle;line-height:20px;padding-left:15px;padding-bottom:10px;padding-top:10px;}
+/*Verlinkung aus Docman*/
+.download-link-holder{width:787px;border:1px solid #888;background:#dcdcdc;margin-left:47px;margin-right:0px;margin-top:30px;padding:10px;}
+.download-link{font-family:Arial, Helvetica, sans-serif;font-size:15px;font-weight:bold;color:#fff;vertical-align:middle;line-height:20px;padding-left:15px;padding-bottom:10px;padding-top:10px;}
+.zweispalter{position:relative;width:860px;margin-left:20px;margin-bottom:30px;}
+.floatNone{float:none;}
+.floatLeft{float:left;padding-bottom:8px;}
+.floatRight{float:right;}
+/* Modul:Artikelliste */
+.artikelliste{font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;color:#333;margin-left:80px;margin-right:80px;padding-top:5px;padding-right:0;padding-bottom:5px;line-height:2.0;}
+/* Modul:Bildergalerie GroÃŸ */
+.galerie_gr{clear:both;display:block;margin-left:90px;margin-right:80px;padding:20px;border:1px solid #dcdcdc;background:#dcdcdc;width:668px;border-radius: 10px 10px 10px 10px;}
+.gallery_image_line_gr{margin:auto;display:table;}
+.image_gr{margin:6px;float:left;text-align:center;vertical-align:middle;border:5px solid #fff; box-shadow: 5px 5px 5px #A9A9A9;margin-bottom:12px;}
+.image_gr img{border:0;}
+.clearer_gr{clear:both;}
+.distance_gr{padding-bottom:2px;}
+/* Modul:Bildergalerie Normal/Klein*/
+.galerie{clear:both;display:block;margin-left:110px;margin-right:80px;padding:10px;border:1px solid #000;background:#dcdcdc;width:668px;border-radius: 10px 10px 10px 10px;}
+.gallery_image_line{margin:auto;display:table;}
+.image{width:212px;height:150px;float:left;text-align:center;vertical-align:middle;border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none;margin-bottom:12px;}
+.image img{border:0;}
+.clearer{clear:both;}
+.distance{padding-bottom:2px;}
+/* Modul:Docman */
+.compactdownload{width:100%;position:relative;display: inline-table !important; padding: 10px 0px 25px 0px}
+.compactdownload_no_files{width:783px;margin-bottom:20px;margin-left:56px; margin-top:10px; position:relative; height:42px; color:#fff; font-size: 14px; text-align: left; text-indent: 10px; vertical-align: middle;
+ line-height:3em; font-weight:bold; background: linear-gradient(top, #004628 0%, #008149 50%, #008149 100%); background: -moz-linear-gradient(top, #004628 0%, #008149 50%, #008149 100%); background: -webkit-linear-gradient(top, #004628 0%, #008149 50%, #008149 100%); background: -ms-linear-gradient(top, #004628 0%, #008149 50%, #008149 100%); background: -o-linear-gradient(top, #004628 0%, #008149 50%, #008149 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#004628, endColorstr=#008149,GradientType=1)}
+/*.compactdownload{width:752px;margin-bottom:20px;margin-left:78px; margin-top:10px; position:relative;}*/
+#compactdownload{margin-bottom:0px;}
+.compactdownload_spalte{vertical-align:middle;text-align:center;padding:2px; height: 22px;}
+.compactdownload_spalte_date{font-size: 1.0em; font-family:arial;}
+.compactdownload_spalte_1{vertical-align:middle;font-size:14px;text-indent:10px;text-align:left;width:400px;}
+.compactdownload_spalte_1 td{color:#000;}
+.compactdownload_col_odd table,.compactdownload_col_even table{background:none;}
+.compactdownload_icon{border:0;position:relative;left:-6px;}
+#compactdownload_header, #compactdownload_header table{font-family:Arial, Helvetica, sans-serif;color:#fff; height:20px; background-color:#5cba93;}
+.compactdownload_col_odd{font-family:Arial, Helvetica, sans-serif;font-size:12px;margin-bottom:5px;height:38px;padding:10px;background-color:#E0E0E0;border:1px solid #004628;font-weight:bold;}
+.compactdownload_col_even{font-family:Arial, Helvetica, sans-serif;font-size:12px;margin-bottom:5px;height:25px;padding:10px; border:1px solid #004628;/*font-weight:bold;*/}
+.compactdownload_col_even td, .compactdownload_col_even div{padding-left:10px;/*padding-top:3px;*/color:#000;}
+.compactdownload_col_odd td, .compactdownload_col_odd div{padding-left:10px;/*padding-top:3px;*/}
+#sem_kalender {float:left; height:15px; width:120px; display:inline-block; font-size: 1em; font-weight:bold; color:#004628;}
+#sem_uhr {float:left; height:15px; width:110px; margin-left:4px; display:inline-block; font-size: 1em; font-weight:bold; color:#004628;}
+#sem_zone{float:left; }
+.sem_kalender_icon {float: left; margin-right: 8px;}
+.sem_uhr_icon {float: left; margin-right: 8px; margin-left: 0px;}
+.sem_zone {margin-left:8px;}
+.sem_anmelden {background-color: #14ad10; border: 1px solid white; border-radius: 5px; display: inline; padding: 8px;}
+a .sem_anmelden {color:#ffffff; text-decoration:none;}
+#sem_image {width:18px; vertical-align: bottom; padding-right:4px;}
+.compactdownload a .preview{display:none;border:1px solid #888;position:absolute;z-index:50;padding:0;left:200px;bottom:3px;max-height:283px;}
+.compactdownload a:hover .preview{display:block;}
+.seminarkalender_frotschrittsbalken{position:absolute;height:50px;width:100%;display:block;margin-top:20px;z-index:10;}
+.seminarkalender_balken_back{position:absolute;height:100px;width:900px;display:none;margin-top:-5px;}
+.seminarkalender_frotschrittsbalken div{line-height:40px;display:table;vertical-align:middle;text-align:center;width:165px;font-weight:bold;position:absolute;z-index:10;}
+.seminar_todo_anfang{background:url('seminarkalender/fortschritt_1a.png');}
+.seminar_inwork_anfang{background:url('seminarkalender/fortschritt_1b.png');color:#fff;}
+.seminar_done_anfang{background:url('seminarkalender/fortschritt_1b.png');color:#ccc;}
+.seminar_todo{background:url('seminarkalender/fortschritt_2a.png');}
+.seminar_inwork{background:url('seminarkalender/fortschritt_2b.png');color:#fff;}
+.seminar_done{background:url('seminarkalender/fortschritt_2b.png');color:#ccc;}
+.seminar_todo_ende{position:relative;width:104px;height:100px;background:url('seminarkalender/fortschritt_go_a') no-repeat;margin-top:-79px;margin-left:-5px;}
+.seminar_inwork_ende{position:relative;width:104px;height:100px;background:url('seminarkalender/fortschritt_go_b') no-repeat;margin-top:-79px;margin-left:-5px;}
+#seminarfilter, #skalenderfilter{background:#eeeeee; margin-bottom:10px; padding:5px; font-weight:bold; width:848px; margin-left:2px;}
+#seminarfilter a.dp-choose-date{margin-top:0;}
+#keineTreffer{text-align:center;font-size:14px;color:#666;font-weight:bold;margin-top:30px;}
+#schlungsanmeldung_titel{background-color: #004628; border: 1px solid #004628; margin-left: 10px; margin-right: 10px; padding-left: 10px;}
+#schlungsanmeldung_titel h2 {color:white;}
+
+
+.eventlist a{font-weight:bold;color:#004628;}
+.eventlist table{width:100%; margin-left: -2px;}
+
+/*Termine Seminare Beginn*/
+.seminar-flagge-ort {vertical-align: middle; margin-right: 5px;  margin-left: 5px; margin-bottom:2px; width:20px;}
+.seminar-flagge-sprache {width:20px; height:13px;}
+.sem-layout {font-size: 1.0em; font-family: arial; }
+.googlemaps {float:right; border:1px solid; background-color:#fff; width:79px;}
+
+.webex 		{background-color: white; 	color:black; border:1px solid black; border-radius:2px;}
+.ohrel		{background-color: #b7dee8;	color:black; border:1px solid black; border-radius:2px;}
+.eeg_ohrel 	{background-color: beige; color:black; border:1px solid black; border-radius:2px;}
+.eeg_hannover 	{background-color: beige; color:black; border:1px solid black; border-radius:2px;}
+.W-EEG_umlage {background-color: white; 	color:black; border:1px solid black; border-radius:2px;}
+.W-PVNow	{background-color: white; 	color:black; border:1px solid black; border-radius:2px;}
+.W-AN		{background-color: #323232; color:#eb6918; border:1px solid #eb6918; border-radius:2px;}
+.W-MS		{background-color: #92d050; color:black; border:1px solid black; border-radius:2px;}
+.W-SC		{background-color: #8db4e2; color:black; border:1px solid black; border-radius:2px;}
+.MWS		{background-color: white; 	color:black; border:2px solid black; border-radius:2px;}
+.W-EEG		{background-color: white; 	color:black; border:1px solid black; border-radius:2px;}
+.MS			{background-color: white;	color:#00b050; border:2px solid #00b050; border-radius:2px;}
+.SC			{background-color: white; 	color:#538dd5; border:2px solid #538dd5; border-radius:2px;}
+.MS-E		{background-image: url("../template/flags/special/21x14px_GB.jpg"); background-color: #e26b0a; color:white; border:1px solid #974808; border-radius:2px;}
+.SC-E		{background-image: url("../template/flags/special/21x14px_GB.jpg"); background-color: #76933c; color:white; border:1px solid #5d7330; border-radius:2px;}
+.W-MS-E 		{background-image: url("../template/flags/special/21x14px_GB.jpg"); background-color: #ffc000; color:black; border:1px solid #69623a; border-radius:2px;}
+.W-SC-E 		{background-image: url("../template/flags/special/21x14px_GB.jpg"); background-color: #ff9933; color:black; border:1px solid #45842a; border-radius:2px;}
+.MWS-E 		{background-image: url("../template/flags/special/21x14px_GB.jpg"); background-color: white;   color:black; border:2px solid black;	  border-radius:2px;}
+.MS-UK 		{background-image: url("../template/flags/special/21x14px_GB.jpg"); background-color: #795b91; color:white; border:1px solid #463454; border-radius:2px;}
+.AK-UK 		{background-image: url("../template/flags/special/21x14px_GB.jpg"); background-color: #795b91; color:white; border:1px solid #463454; border-radius:2px;}
+.MS-ES 		{background-image: url("../template/flags/special/21x14px_ES.jpg"); background-color: #948a54; color:white; border:1px solid #69623a; border-radius:2px;}
+.AK-ES 		{background-image: url("../template/flags/special/21x14px_ES.jpg"); background-color: #948a54; color:white; border:1px solid #69623a; border-radius:2px;}
+.MS-FR 		{background-image: url("../template/flags/special/21x14px_FR.jpg"); background-color: #dee161; color:black; border:1px solid #69623a; border-radius:2px;}
+.AK-FR 		{background-image: url("../template/flags/special/21x14px_FR.jpg"); background-color: #dee161; color:black; border:1px solid #69623a; border-radius:2px;}
+.SC-FR 		{background-image: url("../template/flags/special/21x14px_FR.jpg"); background-color: #dee161; color:black; border:1px solid #69623a; border-radius:2px;}
+.PV20 		{background-color: white; color:black; border:1px solid black; border-radius:2px;}
+.W-EEG3		{background-color: white; color:black; border:1px solid black; border-radius:2px;}
+.W-WiSo		{background-color: white; color:black; border:1px solid black; border-radius:2px;}
+.W-PVoF		{background-color: white; color:black; border:1px solid black; border-radius:2px;}
+.W-LiK		{background-color: white; color:black; border:1px solid black; border-radius:2px;}
+.Messung-u-Service {background-color: white; color:black; border:1px solid black; border-radius:2px;}
+.steuer-wirtschaft {background-color: white; color:black; border:1px solid black; border-radius:2px;}
+.Eigenstrom-u-Geschaeftsmodelle {background-color: white; color:black; border:1px solid black; border-radius:2px;}
+.Betreiberkonferenz {background-color: white; color:black; outline:1px solid black; border:2px solid red; border-radius:2px;}
+.MSSC-SA {background-image: url("../template/flags/special/21x14px_AMS.jpg"); background-color: #798791; color:white; border:1px solid #463454; border-radius:2px;}
+.MSSC-IN {background-image: url("../template/flags/special/21x14px_IN.jpg"); background-color: #798791; color:white; border:1px solid #463454; border-radius:2px;}
+
+.eeg_hannover, .eeg_ohrel, .ohrel, .W-PVNow, .W-AN, .W-MS, .W-SC, .MWS, .W-EEG, .MS, .SC, .steuer-wirtschaft, .PV20, .Messung-u-Service, .Eigenstrom-u-Geschaeftsmodelle, .Betreiberkonferenz, .W-EEG3, .W-WiSo, .W-PVoF, .W-LiK, .W-EEG_umlage,.webex, .MSSC-SA, .MSSC-IN, .W-MS-E, .W-SC-E   {
+display: inline-block; float: left; font-weight: bold; margin-left: 2px; margin-right: 10px; margin-top: 3px; padding: 2px; text-align: center; width: 150px;}
+.MS-E, .SC-E, .W-MS-E, .W-SC-E , .MWS-E, .MS-UK, .AK-UK, .MS-ES, .AK-ES, .MS-FR, .AK-FR , .SC-FR , .MSSC-SA, .MSSC-IN{
+background-position: 138px 5px; float: left; background-repeat:no-repeat; width: 150px; padding: 2px 20px 2px 5px; font-weight: bold; margin-right: 10px; margin-top: 3px;}
+
+/*Termine Seminare ENDE*/
+
+/* Modul:X-Form  Beginn */
+.xform{width:885px;position:relative;}
+.pflichtfelder{position:absolute;right:2px; top:17px; color:#004628; font-size:12px; font-weight:bold;}
+.pflichtfelder_fr, .pflichtfelder_es, .pflichtfelder_cz , .pflichtfelder_gr, .pflichtfelder_ru, .pflichtfelder_tr, .pflichtfelder_pt {position:absolute;right:2px; top:-14px; color:#004628; font-size:12px; font-weight:bold;}
+
+.xform .formtext input, .xform select, .xform .formfile input, .xform .formtextarea textarea, .xform .formpassword input, .xform .formcheckbox input{background:#fff;width:204px;height:20px;border:1px solid #666; padding-left:4px;}
+.xform .formcheckbox input{width:20px;margin-right:182px;}
+.xform .formselect select{width:210px;}
+.xform .formtext input:focus, .xform .formselect select:focus, .xform .formfile input:focus, .xform .formtextarea textarea:focus, .xform .formpassword input:focus, .xform .formcheckbox input:focus{background:#F0F0F0;border:1px solid #666;}
+.xform .formtextarea textarea{width:552px;height:80px;}
+
+/* Modul:X-Form +++ SEMINARANMELDUNG +++  Beginn */
+.xform .fieldset_formular_seminar{float:none;margin:auto;background:transparent;border:none;padding:10px 10px 10px 10px;margin-top:20px;width:700px;}
+.xform .fieldset_formular_seminar .formtextarea textarea{width:555px;height:40px;}
+#seminarform #form_formular .fieldset_formular_seminar .formtextarea{margin-top:20px;}
+/*.xform .fieldset_formular_seminar .formcheckbox {color:#fff;font-size:2px;width:0px;float:left;padding-left:0px;padding-right:0px;line-height:0px;} */
+/*.xform .fieldset_formular_seminar .formcheckbox   {width:675px;float:left;margin-right:24px;clear:left;} */
+/*.xform .fieldset_formular_seminar .checkbox   {width:0px;float:left;margin-right:10px;} */
+.xform .fieldset_formular_seminar .formcheckbox{float:left;margin-bottom:5px; margin-left: 5px;}
+/*.xform .fieldset_formular_seminar .formsubmit input{min-width:80px;margin-left:auto;margin-right:24px;float:right;clear:left;background:transparent;height:22px;border:1px solid #666;}*/
+/* Modul:X-Form +++ SEMINARANMELDUNG +++  Ende */
+.btn {border-radius: 3px; line-height: 3px; margin-left: 7px; margin-top: -5px;}
+/*.btn {border: 1px solid #004628; border-radius: 3px; line-height: 3px; margin-top: -5px;}*/
+/*.xform .formsubmit input{min-width:80px;margin-left:auto;margin-right:31px;float:right;clear:left;height:22px;border:1px solid #666;padding: 2px 3px; background-color:#14ad10; color:#fff; padding-bottom:4px;}*/
+.break_btn {float: right; margin-right: 38px; margin-top: -15px; background-color: #ededed; border:1px solid #aaa; border-radius:3px; color:#626262;}
+.back_btn {margin-left: 47%;}
+.back_btn_form {border-radius: 3px; line-height: 2px; margin-top: 467px; position: absolute; right: 7px; top: 14px;}
+.xform .formsubmit input{min-width:80px; float:left; clear:left; height:22px; border:1px solid #666; background-color:#14ad10; color:#fff;}
+.xform .formsubmit input .abbruch{min-width:80px; float:right; clear:left; height:22px; border:1px solid #666; padding: 2px 3px; background-color:#14ad10; color:#fff; padding-bottom:4px;}
+
+/*.xform .formsubmit input:hover {display: block;opacity: 0.5; filter: alpha(opacity=40);}*/
+.xform .fieldset_formular{float:none;margin:auto;background:transparent;border:none;padding:10px 10px 10px 10px;margin-top:20px;margin-left:35px;width:750px; font-weight:normal;}
+.xform .formtext label, .xform .formselect label,.xform .formradio label,.xform .formfile label ,.xform .formtextarea label ,.xform .formpassword label,.xform .formcheckbox label,.xform .form_select_datetime label,.xform .day span,.xform .month span,.xform .year span,.xform .hour span,.xform .minute span{color:#464646;font-size:12px;width:100px;float:left;padding-left:0px;padding-right:10px;line-height:20px;}
+.checkdesign {width:20px;}
+.teilnahme_text{width:600px;float:left;margin-left:30px; margin-top:-29px;}
+.formlabel-plz input.text, .formlabel-zip input.text{width:60px;}
+.xform p.formlabel-plz, .xform p.formlabel-zip{width:177px;}
+.formlabel-ort input.text, .formlabel-city input.text{width:136px;}
+.xform p.formlabel-ort, .xform p.formlabel-city{width:139px;margin-left:1px;}
+.xform p.formlabel-ort label, .xform p.formlabel-city label{display:none;}
+.xform .formradio .radio .formradio label{float:none;}
+.xform .formradio .radio .formradio{width:60px;float:none;}
+.xform .formradio .radio .formradio input{margin-right:5px;vertical-align:middle;}
+.xform .formtext,.xform .formselect, .xform .formradio, .xform .formfile, .xform .formtextarea, .xform .formcaptcha, .xform .formpassword, .xform .formcheckbox{float:left;margin-bottom:3px;width:348px;}
+.xform .formtextarea, .xform .formsubmit{width:700px;}
+#rex-form-passwdvergessen .formsubmit input{margin-right:302px;}
+.fieldset_formular legend{color:#004628;font-weight:bold;font-size:1.2em;}
+.fieldset_formular .heading{color:#004628;font-weight:bold;font-size:1.2em;padding-top:20px;margin-bottom:20px;}
+.fieldset_pw_lost_bg {background-color:#dcdcdc; width:912px;}
+.fieldset_pw_lost_header {background-color: #004628; color: #fff; font-size: 1.2em; padding-left: 20px; width: 892px;}
+.fieldset_pw_lost_send-bt {position: relative; margin-top:-25px;}
+.xform .hidden{visibility:hidden;}
+.xform .hidden p{margin:none;}
+#seminarform #form_formular .formtextarea label{float:none;padding:0;}
+#seminarform #form_formular .formtextarea label,#seminarform #form_formular .formtextarea textarea{width:662px;margin-top:5px;}
+#seminarform #form_formular .formtextarea{margin-top:60px;}
+.form_select_datetime{width:100%;float:left;margin-bottom:5px;}
+.xform .day,.xform .month,.xform .year,.xform .minute,.xform .hour{width:140px;float:left;}
+.xform .day select,.xform .month select,.xform .year select,.xform .hour select,.xform .minute select{float:left;margin-bottom:5px;width:50px;}
+.xform .day span,.xform .month span,.xform .year span,.xform .hour span,.xform .minute span{width:auto;line-height:18px;}
+/* Modul X-Form ++++ WerksfÃ¼hrung +++ Anfang */
+.xform .fieldset_werksfuehrung{float:none;margin:auto;background:transparent;border:none;padding:0px 10px 0px 20px;margin-top:20px;}
+.xform .fieldset_werksfuehrung .formtext,.xform .fieldset_werksfuehrung div.formradio, .xform .fieldset_werksfuehrung .formselect{float:none;margin-left:280px;margin-top:5px;width:560px;}
+.xform .fieldset_werksfuehrung div.formradio,.xform .fieldset_werk_zeit .formtext{margin-left:0px;}
+.xform .fieldset_werksfuehrung div.formradio label{color:#004628;line-height:15px;margin-bottom:10px;padding-left:0px;}
+.xform .fieldset_werksfuehrung span.formradio label{color:#464646;padding-left:5px;}
+.xform .form_interesse label.radio,.xform .fieldset_werksfuehrung .formtext label ,.xform .fieldset_werksfuehrung .formselect label{width:200px;font-size:12px;font-weight:bold;line-height:24px;}
+.xform .fieldset_werksfuehrung .formtext input,.xform .fieldset_werksfuehrung .formselect select{width:235px;background-color:#fff;}
+.xform .form_interesse{margin-top:5px;width:100%;}
+.xform .form_interesse .radio .formradio{margin-top:5px;width:200px;display:block;}
+.xform .formlabel-wunschdatum input.text{width:150px;color:#004628;border-bottom-width: 10px;}
+.xform .formlabel-uhrzeit input.text{width:100px;color:#004628;}
+.xform .fieldset_werk_zeit {border:1px solid; color:#dcdcdc; border-radius: 8px 8px 8px 8px; width:230px; height:141px;float:left;position:relative;background-color:#eeeeee;}
+/*.xform .fieldset_werk_zeit, .xform .fieldset_werk_interesse{width:220px;float:left;position:relative;}*/
+.xform .fieldset_werk_interesse{margin-left:280px;width:215px; height:141px;float:left;}
+/*.xform .fieldset_werk_zeit{background:url('230x141px_background_zeitauswahl_werksfuehrungen.png');height:141px;}*/
+.xform .fieldset_werksfuehrung .fieldset_werk_zeit .formtext label{width:150px;}
+.xform .fieldset_werksfuehrung .fieldset_werk_zeit .formtext{width:200px;float:none;margin-left:auto;margin-top:12px;}
+.xform .fieldset_werk_zeit label{padding-left:0px;}
+.xform .fieldset_werksfuehrung .formsubmit{width:auto;}
+.xform .fieldset_werksfuehrung .formsubmit input{margin-right:0px;background-color:#fff;margin-top:-20px;color:#464646;font-family:Arial;}
+/* Modul X-Form ++++ WerksfÃ¼hrung +++ Ende */
+/* Modul X-Form ++++ Biergartenfest +++ Anfang */
+.xform .fieldset_biergartenfest{float:none;margin:auto;background:transparent;border:none;position:relative;top:-15px;}
+.xform .fieldset_biergartenfest p{width:410px;margin-bottom:2px;}
+.xform .fieldset_biergartenfest label{font-weight:bold;}
+.xform .fieldset_biergartenfest p.formtext input{width:288px;background-color:#fff;}
+.xform .fieldset_biergartenfest p.formlabel-plz{width:210px;}
+.xform .fieldset_biergartenfest .formlabel-plz input.text{width:82px;}
+.xform .fieldset_biergartenfest p.formlabel-ort{width:198px;}
+.xform .fieldset_biergartenfest .formlabel-ort input.text{width:187px;}
+.xform .fieldset_biergartenfest .formselect .formlabel-anzahl{width:420px;}
+.xform .fieldset_biergartenfest .formlabel-anzahl label{width:356px;color:#004628;padding-right:4px;line-height:21px;margin-top:15px;}
+.xform .fieldset_biergartenfest .formlabel-anzahl select{width:50px;background-color:#fff;margin-top:15px;}
+.xform .fieldset_biergartenfest div.form_shuttle, .xform .fieldset_biergartenfest div.form_shuttle_back{width:400px;margin-top:15px;}
+.xform .fieldset_biergartenfest .form_shuttle label, .xform .fieldset_biergartenfest .form_shuttle_back label{float:none;color:#004628;padding-left:0px;line-height:13px;}
+.xform .fieldset_biergartenfest .form_shuttle p.radio, .xform .fieldset_biergartenfest .form_shuttle_back p.radio{margin-top:7px;margin-bottom:13px;width:300px;}
+.xform .fieldset_biergartenfest .form_shuttle .formradio, .xform .fieldset_biergartenfest .form_shuttle_back .formradio{display:block;width:auto;margin-bottom:1px;}
+.xform .fieldset_biergartenfest .form_shuttle .formradio label, .xform .fieldset_biergartenfest .form_shuttle_back .formradio label, .xform .fieldset_biergartenfest .form_gender .formradio label{color:#464646;padding-left:5px;padding-right:10px;position:relative;top:-2px;margin-bottom:0px;}
+#rex-xform .fieldset_biergartenfest .form_warning .formradio label{color:red;}
+/* ---------- LOGIN Bereich ------------ */
+#background{background-color: #c7c7c7; height: 591px; width: 912px; margin-top:7px; position:absolute;}
+.login-headliner{padding-left:4px; font-size:1.8em;}
+.login_holder{margin-left:100px; margin-top:20px;}
+.locked-pic{width:70px; height:68px; margin-bottom:20px;}
+.locked-pic-style {width:70px; height:68px;}
+.login-nameliner{position:absolute; display:inline; margin-left:99px; margin-top: -66px; width:300px; height:20px; font-size:1.3em; font-weight:bold;}
+#anmeldung_fehlschlag{padding:5px;position:relative;margin: -20px 0px 10px 0px;}
+.LoginEingeben {color:#004628; width:712px; height:60px;}
+.LoginEingabe-falsch {color:red; width:712px; height:60px;}
+.LoginEingeben, .LoginEingabe-falsch {font-size:1.2em; margin-left: 4px;}
+.form-warning-login {font-size:1.0em;color:red;}
+.div-new-login {margin-left:150px; margin-top:10px; background-color: #515151; border: 1px solid #000; border-radius: 3px; color:white;}
+.no-login-style{font-size:1.2em; font-weight:bold;}
+/*.login-button {float:left;}*/
+.button-style {float:left; border: 1px solid #000; border-radius: 3px; background-color:#515151; color:#fff; width:100px; height:32px; margin-left:2px; cursor:pointer; opacity:0.8;}
+.button-style:hover {opacity:1.0;}
+.login-eingabe {width: 420px; height:30px; border:1px solid #000; border-radius:3px; background-color: #004628; padding-left:5px;}
+.login-vergessen {width: 230px; height:32px; border:1px solid #000; border-radius:3px; background-color: #515151; opacity:0.8; color:#fff; cursor:pointer;}
+.login-vergessen:hover {opacity:1.0;}
+.vergessen-text {font-size:1.1em; color:#fff;}
+.link-registrieren {width: 557px; height:32px; margin-left:2px; border:1px solid #000; border-radius:3px; background-color: #515151; opacity:0.8; color:#fff; cursor:pointer;}
+.link-registrieren:hover {opacity:1.0;}
+/* TEXT MEIN PROFIL */
+.login-text-table {width:911px; background-color:#004628; border: 1px solid #004628;margin-top:20px;}
+.logintext-begruessung {font-family:Arial, Helvetica, sans-serif;font-size:1.2em;color:#004628; background-color:#cccccc}
+.login-td {height:30px; padding-left:20px;}
+.logintext a{font-family:Arial, Helvetica, sans-serif;font-size:1.2em;color:#fff;}
+.logintext a:hover{font-weight:bold;}
+.ueberschrift{font-size:1.0em;padding-left:15px;padding-bottom:15px;}
+/* ----------- ENDE LOGIN ---------------- */
+.xform .fieldset_biergartenfest .formsubmit{width:400px;left:-50px;position:relative;}
+.xform .fieldset_biergartenfest .formsubmit input{font-family:Arial;color:#464646;}
+.xform .fieldset_biergartenfest .formsubmit input{background-color:#fff;top:+150px;left:+100px;position:relative;}
+/* Modul X-Form ++++ Biergartenfest +++ Ende */
+/* Modul X-Form ++++ Nutzungsbedingungen +++ Anfang */
+.xform .form_nutzungsbedingungen{margin-left:20px;padding:0;border:none;width:auto;}
+.nutzungsbedingungen{border:1px solid #ddd;padding:10px;height:400px;overflow:auto;background-color:#fafafa;}
+.conf_text_639{border: 1px solid red; color: red; display: block; margin-left: 20px; margin-top: -71px; position: absolute; text-align: center; width: 863px;}
+.xform .form_nutzungsbedingungen .formcheckbox{width:99%;padding:5px;background:#fff;margin-top: 10px;}
+.xform .form_nutzungsbedingungen .formcheckbox label{width:auto;float:none;line-height:22px;}
+.xform .form_nutzungsbedingungen .formcheckbox input{margin:0;vertical-align:top;}
+.xform .form_nutzungsbedingungen .formsubmit{width:auto;}
+.xform  .form_nutzungsbedingungen .formsubmit input{margin-right:0px;/*background-color:#E0E0E0;*/padding:2px 3px}
+/* Modul X-Form ++++ Nutzungsbedingungen +++ Ende */
+/* Modul X-Form ++++ Anregungen/WÃ¼nsche +++ Anfang */
+.xform .fieldset_anregungen{float:none;margin:auto;background:transparent;border:none;padding:0px 10px 0px 20px;margin-top:20px;}
+.xform .fieldset_anregungen td{width:290px;display:block; float:left;}
+.xform .fieldset_anregungen .pic{ background:url('250x158px_formular_anregungen.png')no-repeat;width:270px;height:160px;display:block;}
+.xform .fieldset_anregungen  label{color:#004628;line-height:15px;margin-bottom:10px;padding-left:0px;font-weight:bold;float:none;}
+.xform .fieldset_anregungen span.formradio label{color:#464646;}
+.xform .fieldset_anregungen .formradio{width:auto;}
+.xform .fieldset_anregungen .formradio p.radio{margin-top:10px;}
+.xform .fieldset_anregungen .formradio .radio .formradio{width:42%;float:left;margin:6px 0 0 0;}
+.xform .fieldset_anregungen .form_form .radio .formradio{width:99%;}
+.xform .fieldset_anregungen .second td{width:350px;display:block; float:left;}
+.xform .fieldset_anregungen .second .first{width:440px;margin-right:60px;}
+.xform .fieldset_anregungen textarea,.xform .fieldset_anregungen .formtextarea{ width:100%; height:200px;}
+.xform .fieldset_anregungen label.text{/*display:block;*/}
+.xform .fieldset_anregungen label{margin-bottom:0;}
+.xform .fieldset_anregungen .formtext input, .xform .fieldset_anregungen .formfile input{width:100%;}
+.xform .fieldset_anregungen .formfile{margin-bottom:20px; margin-top:2px;}
+.xform .fieldset_anregungen .formcheckbox input{margin-right:10px;vertical-align:bottom;margin-top:12px;}
+.xform .fieldset_anregungen .formsubmit,.xform .fieldset_anregungen .formsubmit input{width:auto;margin-right:0;}
+.xform .fieldset_anregungen label.form_warning a,.xform .fieldset_anregungen .form_warning label{color:#FF0000;}
+/* Modul X-Form ++++ Anregungen/WÃ¼nsche +++ Ende */
+/* Modul X-Form ++++ Fehlermeldung +++ Anfang */
+.form_warning{color:#ff0000;font-size:1.2em;}
+ul.form_warning{list-style:square inside;margin:20px;border-top:1px dotted #ff0000;border-bottom:1px dotted #ff0000;}
+.xform label.form_warning{color:#ff0000;}
+/* Modul X-Form ++++ Fehlermeldung +++ Ende */
+/* Modul:X-Form  Ende */
+/*.bopplheader{margin:10px 20px;  line-height:18px;}*/
+.bopplheader-titel {margin-top:15px; margin-left:21px; width:530px; height:23px; font-size:1.3em; font-weight:bold;}
+/*.boppelheader-download {margin-top:0; margin-left:574px; width:300px; margin-right:8px;  font-size:1.2em; font-weight:bold;}*/
+/*.boppelheader-download {margin-top:-27px; margin-left:571px; width:300px; margin-right:8px; margin-bottom:30px; font-size:1.2em; font-weight:bold;}*/
+.boppelheader-download {margin: -27px 8px 36px 571px; width:300px; font-size:1.2em; font-weight:bold;}
+.boppelheader-download ul {padding-top:2px; float:right;}
+.boppelheader-download li {list-style-image: url(15x13px_downloadpfeil.png);}
+
+#inhalt .bopplheader h1{border:none;line-height:30px;padding:10px 0 0 0;display:table-cell;vertical-align:baseline;width:900px;}
+.bopplheader .produkt_links li a{line-height:25px;}
+.wichtig{color:red;}
+.wichtig_box{background-color:red;}
+
+/* Modul:Produkte */
+.produkte{margin-left:20px;}
+.produktueberschrift{margin-left:15px;}
+.produktunterschrift{margin-left:15px;margin-top:-5px;}
+.produkte ul{list-style-image:url('files/dash.gif');}
+.produkte div{margin-top:0;}
+
+#zumdatenblatt{margin-top:5px;}
+#zurcheckliste,#zumdatenblatt{margin-left:27px;padding-bottom:5px;}
+#zumdatenblatt img, #zurcheckliste img{padding-bottom:2px;}
+/* Modul:Newsteaser */
+.teaser{margin-bottom:20px;clear:both;}
+.teaserNav{padding-left:25px;}
+.teaser a img{border:none;}
+.image p{margin-bottom:10px;margin-top:0px;}
+/* Ansprechpartner +++ Start */
+/* Ansprechpartner */
+/* Ansprechpartner +++ Navigation +++ Start */
+.ansprechpartnerwahl{position:absolute;top:340px;position:relative;}
+.ansprechpartnerausgabe{position:absolute;left:308px;overflow:auto;height:585px; /*width:583px;*/}
+.ansprechpartnerbox{position:absolute;left:420px;overflow:hidden;height:246px; width:312px;top:185px;border:1px solid #676767;}
+.ansprechpartnerbox2{position:relative;left:30px;top:17px;}
+.ansprechpartnerbereich{float:left;left:30px;position:relative;margin-top: 20px;z-index:10;}
+.ansprechpartnerbereich a{font-size:12px;color:#464646;}
+.ansprechpartnerbereich li{list-style:none outside;}
+.ansprechpartnerbereich li.parent{list-style:url('11x11px_liste_plus_transparent.png') outside;}
+.ansprechpartnerbereich li.aktiv{list-style:url('11x11px_liste_minus_transparent.png') outside;}
+.ansprechpartnerbereich li.aktiv a, .ansprechpartnerbereich a.active{color:#004628;font-weight:bold;}
+.ansprechpartnerbereich li.karte{list-style:url('11x11px_liste_plus_gefuellt.png') outside;}
+.ansprechpartnerbereich ul{margin-top:5px;margin-bottom:5px;margin-left:40px;}
+.ansprechpartnerkarte{float:right;margin-right:40px;position:relative;left:-600px;}
+/* Ansprechpartner +++ Navigation +++ Ende */
+/* Ansprechpartner +++ Visitenkarten +++ Start */
+.ansprechpartner_holder{background:url('275x160px_rahmen_kontakt.png') no-repeat;padding:8px 0px 8px 8px;margin:0px 0px 5px 10px;width:265px;height:145px;}
+.ansprechpartner_bild{float:left;margin-right:10px;width:70px;text-align:center;line-height:12px;}
+.ansprechpartner_bild img{height:97px;margin-bottom:5px;}
+.ansprechpartner_kontakt{line-height:15px;}
+.ansprechpartner_bild a{font-size:10px;}
+.ansprechpartner_name{font-size:16px;font-weight:bold;color:#004628;}
+.ansprechpartner_position{font-size:11px;/*color:#004628;*/margin-bottom:5px;line-height:13px;}
+.ansprechpartner_kontakt a{top:-4px;position:relative;}
+.ansprechpartner_daten{width:253px;}
+/* Ansprechpartner +++ Visitenkarten +++ Ende */
+/* Ansprechpartner +++ Ende */
+/* kategorieliste mit Bildern */
+.kategorieimages{margin-right:80px;margin-left:80px;margin-bottom:20px;width:680px;}
+.kategorieimage{float:left;padding-right:15px;}
+.kategorieimage img{border:2px solid #004628;}
+.letzte_kategorie_image{padding:0;}
+/* Unzugeordnet */
+.tinymcewysiwyg img{border:none;}
+/*.tinymcewysiwyg{clear: both; opacity: 1.0; margin-top: 20px; margin-bottom: -90px; margin-left:18px;}*/
+.tinymcewysiwyg{clear: both; opacity: 1.0; margin: 20px 20px;}
+.tinymcewysiwyg_versand{clear: both; opacity: 1.0; margin-left: 19px; margin-bottom: 20px;}
+/*#fehlermeldung{margin-top:60px;width:754px;padding-top:20px;margin-left:80px;font-size:1.3em;color:#8b0000;background-color:#E0E0E0;font-weight:bold;text-align:center;border:solid 1px #000000;}*/
+#fehlermeldung{width:657px; background-color:#004628; color:#fff; vertical-align:middle;padding-top:8px;padding-bottom:8px;margin:50px 101px 0px;font-size:1.2em;font-weight:bold;text-align:center;border:1px solid #000; border-radius: 3px;}
+#serviceprogramm{font-size:12px;width:680px;margin-left:80px;}
+.table_underline{border-bottom:2px solid #333;}
+.flvplayer{display:block;background:#fff;padding:20px;padding-bottom:10px;border:1px solid #666;margin-left:80px;margin-right:80px;width:654px;text-align:center;}
+.flvplayer h3{margin-top:10px;}
+#search_results{width:680px;margin-left:80px;margin-right:80px;}
+.search_result{padding:10px;border:1px solid #666;margin-bottom:20px;background:#fff;}
+#categoryList{margin-left:95px;margin-top:30px;width:680px;}
+#categoryList ul{list-style-type:square;}
+#categoryList ul ul{list-style-type:disc;}
+#categoryList ul ul li{border 1px solid #ccc;font-size:12px;}
+.categoryList{font-size:14px;font-weight:bold;color:#333;padding-top:5px;padding-right:0;padding-bottom:5px;line-height:2.0;}
+#videoList{margin-left:60px;margin-top:30px;width:680px;}
+#videoList ul{list-style-type:square;}
+#videoList ul ul{list-style-type:disc;}
+#videoList ul ul li{border:1px solid #ccc;font-size:12px;}
+.videoList{font-size:14px;font-weight:bold;color:#333;padding-top:5px;padding-right:0;padding-bottom:5px;line-height:2.0;}
+.newslist{margin-left:80px;margin-right:80px;margin-top:10px;margin-bottom:10px;width:663px;background:#fff;border:1px solid #666666;padding:5px;padding-left:10px;}
+.fieldset_formular{background:#F0F0F0;/*border:1px solid #004628;*/padding:12px;padding-left:20px;width:825px;margin-bottom:10px;background-image:url("files/bg_body_wellen_klein.png");font-weight:bold;padding-bottom:20px;}
+.fieldset_formular_test{border:0px solid #666666;padding:12px;padding-left:10px;width:654px;margin-bottom:10px;background-image:"files/bg_body_wellen_klein.png";}
+.searching-results-form {background-color:#fff; margin-left:56px; margin-top:10px; border:medium none;}
+.tr-border-bottom {border-bottom:1px solid #dcdcdc;}
+.line23 {line-height:16px;}
+.kategorieimages{margin-right:80px;margin-left:80px;margin-bottom:20px;}
+.kategorieimage{float:left;padding-right:15px;}
+.letzte_kategorie_image{padding:0;}
+.answertext{width:800px;margin-left:auto;margin-right:auto;margin-top:10px;font-size:1.1em;padding:15px;text-align:center; background-color: #ccdccc; border: 1px solid #004628; border-radius:2px; color:#004628;}
+.produkt{margin-left:130px;width:650px;border:0px solid #ccc;padding:7px;vertical-align:top;}
+/*
+.stellenangebot{width:812px;padding:10px;}
+.stellenangebot td{padding-bottom:15px;}
+*/
+/* STELLENANGEBOTE */
+.top_text1 {margin-top: 40px; margin-left:20px; width: 850px;}
+/*.stellen_angebot {margin-left:20px; width: 850px; border: 1px solid #004628; border-radius: 3px; padding-left: 18px; padding-top: 8px; padding-bottom: 8px; margin-bottom:4px;}*/
+.stellen_angebot {background: #eee; height: 35px; padding-left: 20px; font-weight: bold; width: 90%; margin: 20px; line-height: 31px; box-shadow: 3px 3px 2px #000;}
+/*.stellen_angebot:hover {background-color: #D6D6D6;}*/
+/*.stellen_angebot ul li {font-weight: bold; color: #004628; list-style-type:none;}*/
+.no_stellen {margin-left:20px; width: 850px; border: 1px solid #004628; border-radius: 3px; padding-left: 18px; padding-top: 8px; padding-bottom: 8px;}
+/* STELLENANGEBOTE */
+.html_editor{margin-left:22px;}
+#html_editor_sp{margin-left:78px;padding-bottom:8px;}
+#html_editor_sp td{padding-left:10px;}
+#pnavigator{position:relative;width:905px;left:-21px;z-index:999;}
+#youtube{position:absolute;width:1000px;top:55px;left:0%;z-index:1;border:0;}
+#teilnahmebedingung {width:656px; display:inline-block; padding:5px; margin-top: 15px; margin-bottom:15px; border:1px solid #ddd; background-color:#fafafa; font-size: 0.8em; color: #464646;}
+.teilnahmebedingung {width:659px; padding:5px; margin-top:310px; margin-bottom:5px; border:1px solid #666666;background-color:#ededed; font-size: 0.8em; color: #464646;}
+.checkbox_si{width:20px;margin-right:18px;}
+.checkbox  {cursor:pointer; font-size:bold;}
+
+/* Artikel Anfang +++ Start */
+.artikelblock{margin:20px;overflow:hidden;}
+.artikelblock_header{font-size:16px;font-weight:bold;color:#004628;position:relative;}
+.artikelblock_bild{width:40%;float:left;margin-right:12px;}
+.artikelblock_bild img{max-width:100%;max-height:100%;}
+.artikelblock_inhalt, .artikelblock_inhalt p, .artikelblock_inhalt li{color:#464646; width: 100%;}
+.artikelblock_inhalt li{color:#464646;}
+.artikelblock_inhalt ul, .produkt_fliesstext ul{list-style:disc inside none;}
+ul.artikelblock_download{position:absolute;right:0;top:0; list-style-type: none; padding-right:2em;
+background: linear-gradient(top, #004628 0%, #008149 50%, #008149 100%); background: -moz-linear-gradient(top, #004628 0%, #008149 50%, #008149 100%); background: -webkit-linear-gradient(top, #004628 0%, #008149 50%, #008149 100%); background: -ms-linear-gradient(top, #004628 0%, #008149 50%, #008149 100%); background: -o-linear-gradient(top, #004628 0%, #008149 50%, #008149 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#004628, endColorstr=#008149,GradientType=1); border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
+.link_download{width:102px; height:21px; border-radius:3px; background-color: #004628; position:absolute;right:39px; margin-top:21px;text-align:center;}
+#link_download-a {color:#ffffff; font-weight:bold; font-size:15px;}
+#link_download-a:hover {color:#dcdcdc;}
+/* Artikel Anfang +++ Ende */
+/* Produkt +++ Start */
+.produkt_header_text, .produkt_spalte_header, .produkt_links a{font-size:14px;font-weight:bold;color:#004628;line-height:14px;}
+.produkt_header_text_2{font-size:9px;font-weight:bold;color:#004628;line-height:9px;position:relative;margin-bottom:5px;margin-left: 6px;}
+.hinweistext{background-color: #004628; border: 1px solid #000; color:#fff; margin-left: 45px; margin-top: 0px; padding: 8px; width: 650px;}
+.hinweistext span {text-decoration:underline;}
+.reg-background {background-color: #fff; margin-left: 0; margin-top: 7px; padding-bottom: 12px; padding-left: 66px; padding-top: 5px; width: 828px;}
+.reg-header {padding-left: 43px;}
+.produkt_header{padding-top:40px;height:20px;position:relative;}
+.produkt_neu .produkt_header{margin-bottom:10px; margin-top:-41px;}
+.produkt_neu a .preview,.produkt_neu_alternative a .preview, .artikelblock a .preview{border: 1px solid #888; display: none; height: 50; margin-right: 242px; margin-top: 258px; padding: 0; position: fixed; z-index: 5;}
+.artikelblock a .preview{top:22px;right:0px;background-color:silver;}
+.artikelblock a .preview img{height:204px;z-index:50;}
+.produkt_neu a .preview img,.produkt_neu_alternative a .preview img {height:110px;}
+.produkt_neu a:hover .preview,.produkt_neu_alternative a:hover .preview,.artikelblock a:hover .preview{display:block;}
+.produkt_header_text{padding-right:10px;display:inline;position:relative;}
+.produkt_header_linie{background:url("../files/870x5px_linie_bobbel_links.png") no-repeat scroll 0 10px transparent;position:absolute;display:inline;}
+.produkt_neu, .produkt_neu_alternative{margin: 65px 20px 100px 20px; clear:both;position:relative;}
+.produkt_spalte_inhalt{min-height:135px;position:relative;float:right;width:580px;padding-bottom:10px;}
+.produkt_spalte_header{margin-bottom:4px;}
+.produkt_spalte_mitte{float:left;margin-right:20px;width:270px;display: inline-block;}
+.produkt_spalte_rechts{width:255px;float:right;}
+.produkt_spalte_rechts .produkt_spalte_header{position:relative;}
+.produkt_fliesstext li, .produkt_spalte_rechts li, .produkt_spalte_mitte_liste li{color:#004628;}
+.produkt_fliesstext li span, .produkt_spalte_rechts li span, .produkt_spalte_mitte_liste li span, .produkt_fliesstext p{color:#464646;}
+.produkt_fliesstext .produkt_links {margin-left:0px;}
+
+/* ------- Prokutlinks NEU ------- */
+#w-links {float: left; height: 44px; overflow: hidden; position: relative; width: 246px;}
+.product_link_btn {border: 1px solid #989898; border-top-left-radius: 8px; border-top-right-radius: 8px; float: left; margin-left: 3px; height: 20px; width: 242px; font-size: 12px;}
+.product_btn2_o {border: 1px solid #989898; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; float: left; margin-left: 3px; margin-top:1px; height: 20px; width: 242px; font-size: 12px; color:#b5b5b5;}
+.product_btn2_aktive {border: 1px solid #989898; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; float: left; margin-left: 3px; margin-top:1px; height: 20px; width: 242px; font-size: 12px; color:black;}
+/* ------- Prokutlinks NEU ENDE ------- */
+
+/* ------- Prokutlinks P-CHARGE NEU ------- */
+#w-links_pch {float: left; margin-left: -2px; height: 44px; overflow: hidden; position: relative; width: 158px;}
+.product_link_btn_pch {border: 1px solid #989898; border-top-left-radius: 8px; border-top-right-radius: 8px; float: left; margin-left: 4px; height: 20px; width: 153px; font-size: 12px;}
+.product_btn2_o_pch {border: 1px solid #989898; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; float: left; margin-left: 4px; margin-top:1px; height: 20px; width: 153px; font-size: 12px; color:#b5b5b5;}
+.product_btn2_aktive_pch {border: 1px solid #989898; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; float: left; margin-left: 4px; margin-top:1px; height: 20px; width: 153px; font-size: 12px; color:black;}
+/* ------- Prokutlinks NEU ENDE ------- */
+
+/* ------- Close Button Search ------- */
+.close_bt {float:right; margin-right:29px; margin-top:19px; width:20px; height:20px;} 
+/* ------- Close Button Search ------- */
+.produktblatt_link {width: 151px; border:1px solid #004628; border-radius:7px; margin-bottom: 3px; text-align:center;}
+.checkliste_link {width: 151px; border:1px solid #004628; border-radius:7px; margin-bottom: 3px; text-align:center;}
+.video_link {width: 151px; border:1px solid #004628; border-radius:7px; margin-bottom: 3px; text-align:center;}
+.produktblatt_link:hover{opacity:0.8;}
+.checkliste_link:hover{opacity:0.8;}
+.video_link:hover{opacity:0.8;}
+
+
+.produkt-link_modi_88 {float: left; margin-bottom: 37px; overflow: hidden; width: 243px;}
+/*.produkt-link_modi_88 {height: 66px; left: -597px; overflow: hidden; position: relative; top: 35px; margin-bottom: 37px; width: 243px;}*/
+.produktblatt_link_mod_id88{border: 1px solid #004628; border-radius: 7px; font-size: 14px; font-weight: bold; line-height: 14px; margin-bottom: 3px; margin-left: 3px; text-align: center; width: 238px;}
+.checkliste_link_mod_id88{border: 1px solid #004628; width: 239px; border-radius:7px; text-align:center;margin-bottom:3px; font-size: 14px; font-weight: bold; line-height: 14px;}
+.video_link_mod_id88{border: 1px solid #004628; width: 239px; border-radius:7px; text-align:center; font-size: 14px; font-weight: bold; line-height: 14px;}
+
+
+.produkt-link-prods, .produkt-link-checklist, .produkt-link-video  li {list-style-image:url(15x13px_downloadpfeil.png);}
+.produkt-link-prods li:hover, .produkt-link-checklist li:hover, .produkt-link-video li:hover {text-decoration:none /*underline*/;}
+.produkt-link-prods, .produkt-link-checklist, .produkt-link-video {margin-right:20px; float:left;}
+.produkt_links-mod02 {height: 20px; margin-left: -26px; margin-top: 16px;}
+.produkt_links-mod02 ul {list-style-image:url(15x13px_downloadpfeil.png); cursor:pointer;display:inline;}
+.produkt_links-mod02 a {color: #004628; font-size: 14px; font-weight: bold; line-height: 14px;}
+.produkt_links-mod02 a:hover {cursor:pointer;text-decoration:underline;}
+ 
+.artikelblock_download li a{font-size:15px; color:white; letter-spacing:0.2em;}
+.artikelblock_download li a:hover {opacity: 0.8;}
+.produkt_fliesstext{min-height:124px;position:relative;margin-left:265px;width:589px;padding-bottom:35px;}
+.NewsToggleContent .produkt_fliesstext{width:auto;}
+.produkt_spalte_rechts_alternative, .produkt_spalte_mitte_alternative{color:#464646;line-height:16px;float:left;}
+.produkt_spalte_rechts_alternative ul li ul, .produkt_spalte_mitte_alternative ul li ul{list-style:disc outside none;}
+.produkt_spalte_rechts_alternative ul li ul li, .produkt_spalte_mitte_alternative ul li ul li{margin-bottom:0;}
+.produkt_spalte_rechts_alternative ul li ul br,.produkt_spalte_mitte_alternative ul li ul br{display:none;}
+.produkt_spalte_rechts_alternative{height:240px;width:330px;}
+.produkt_spalte_mitte_alternative{min-height:240px;padding-right:15px;width:330px;}
+.produkt_spalte_mitte_alternative ul, .produkt_spalte_rechts_alternative ul{list-style:none inside none;}
+.produkt_spalte_mitte_alternative li{margin-bottom:20px;}
+.produkt_bild,.produkt_bild_alternative{float:left;width:250px;margin-right:15px;}
+.produkt_bild_alternative{width:158px;overflow:hidden;}
+.produkt_bild img{max-width:100%;}
+.produkt_fliesstext h4{padding-top:0px;}
+/* Produkt +++ Ende */
+#kontaktseite{position:absolute;top:160px;margin-left:450px;}
+#kontaktseite-GB{position:relative;top:15px;left:10px;}
+#kontaktseite-GB_phone{position:relative;top:-40px;left:110px;}
+#kontaktseite_blanko_hintergrund{background-image:url(https://www.schletter.eu/files/kontakt_hintergrund.png); width:272px; height:160px;}
+/*#kontaktseite-GB_kontakt_hintergrund{position:absolute;top:309px;right:32px;}*/
+#kontaktseite-FR{position:absolute;top:150px;right:110px;}
+#kontaktseite-IT{position:absolute;top:150px;right:110px;}
+#kontaktseite-ES{position:absolute;top:150px;right:110px;}
+#kontaktseite-GR{position:absolute;top:150px;right:110px;}
+.ticker{position:relative;margin-top:20px;margin-left:10px;}
+#abstand_links{padding-left:60px;}
+.objects_align_center{position:relative;}
+.umfrage{background:#000;position:absolute;width:20px;height:100px;right:20px;top:600px;overflow:hidden;}
+.umfrage_1{right:10px;top:50px;width:900px;height:670px;opacity:0.5;}
+.umfrage_noten{position:absolute;left:+110px;width:500px;}
+.hide_umfrage_button{height:20px;width:40px;background:#fff;border:1px solid #ccc;position:absolute;right:0px;}
+.hide_umfrage{height:0px;width:0px;top:600px;right:20px;overflow:hidden;}
+.umfrage_content{position:absolute;top:100px;right:50px;height:600px;width:810px;background:#fff;}
+.galerie_klein{clear:both;display:block;margin-bottom:5px;padding:12px 5px 0px 5px;border:0px solid #000;width:auto;background-color:#FAFAFA;}
+.gallery_image_line_klein{/*margin:auto;*/display:table;}
+.image_klein{width:60px;height:42px;float:left;text-align:center;vertical-align:middle;margin-bottom:12px;padding-left:12px;}
+.image_schatten{-moz-box-shadow:0px 0px 5px #333;-webkit-box-shadow:0px 0px 5px #333;box-shadow:0px 0px 5px #333;}
+.image_klein a:hover{width:65px;height:47px;float:left;left:-6px;top:-6px;position:relative;text-align:center;vertical-align:middle;margin-bottom:3px;padding-left:3px;padding-right:3px;padding-top:3px;padding-bottom:3px;}
+.plz_karte{position:absolute;width:301px;height:380px;top:330px;left:60px;z-index:100;}
+#plz_0{position:absolute;background:url('https://www.schletter.eu/files/plz_karte/0.png')no-repeat;z-index:101;left:136px;top:118px;width:105px;height:77px;border:dashed;}
+#biergatenfest{position:absolute;background:url('https://www.schletter.eu/files/biergartenfest.jpg')no-repeat;z-index:101;left:0px;top:50px;width:904px;height:645px;z-index:-1;}
+#cse-search-results{position:relative;left:55px;width:700px;}
+#zurueck_zur_anmeldung{position:relative;left:740px;top:50px;width:50px;}
+#account_hinweis{float:right;margin-top:25px;margin-right:90px;}
+.produktaenderung{border-top:1px solid #004628;padding-top:10px;margin:10px;clear:both;}
+.produktaenderung_bild{float:left;margin-right:10px;}
+.produktaenderung_bild img{height:100px;}
+.produktaenderung_inhalt{font-size:14px;color:#464646;}
+.produktaenderung_header{font-weight:bold;color:#004628;font-size:16px;}
+.produktaenderung_datum{margin-bottom:35px;font-size:12px;}
+.produktaenderung_footer{padding:10px;}
+.news_uebersicht, .news_startseite{margin:10px;clear:both;}
+.news_uebersicht_pagenavi{float:right;}
+.news_uebersicht .bopplheader{margin-left:0px;}
+.news_uebersicht_bild{width:340px;float:left;overflow:hidden;margin-right:20px;margin-bottom:10px;}
+.news_uebersicht_weiterlesen{display:block;clear:both;text-align:right;font-size:14px;font-weight:bold;color:#004628;height:22px;}
+.news_uebersicht_weiterlesen img{vertical-align:middle;}
+.news_startseite_erste_text{line-height:17px;}
+.news_uebersicht_kurzinfo{width:760px;}
+.news_uebersicht_kurzinfo, .NewsToggleContent{font-size:12px;color:#464646;}
+.news_uebersicht_kurzinfo_schlagzeile{font-size:15px;line-height:20px;}
+.news_uebersicht_kurzinfo_subtitel{font-size:12px;line-height:15px;}
+.news_uebersicht_kurzinfo_datum{margin-bottom:5px;}
+.news_startseite{margin-top:40px;}
+.news_startseite_erste,.news_startseite_zweite{}
+.news_startseite_erste_element{float:left;width:420px;margin-right:20px;padding-bottom:10px;}
+.news_startseite_separator{clear:both;background:url('../files/trennlinie_extra.png') repeat-x;margin:10px 0px 10px 0;height:5px;}
+.news_startseite_erste_header, .news_startseite_zweite_text a, .news_uebersicht_kurzinfo_schlagzeile, .news_uebersicht_kurzinfo_datum, .news_uebersicht_kurzinfo_subtitel{font-weight:bold;color:#004628;line-height:15px;margin-bottom:5px;}
+.news_startseite_erste_bild{float:left;margin-right:5px;}
+.news_startseite_erste_bild img{width:200px;border:none;}
+div.news_startseite_zeile_letzteselement{margin-right:0;}
+.news_startseite_zweite_element{float:left;width:200px;margin-right:20px;margin-top:10px;padding-bottom:10px;}
+.news_startseite_zweite_bild img{width:200px;margin-right:2px;border:none;}
+#apbild{position:relative;margin-left:65px;margin-top:30px;}
+#apdetails{position:relative;left:180px;top:-82px;width:300px;font-family:Arial,Helvetica,sans-serif;text-align:right;color:#464646;}
+/*#apbild2{position:relative;margin-left:365px;top:-335px;width:480px; height:420px;} */
+#apbild2{position:relative; margin-left:400px; top:14px;width:480px; height:420px;}
+#geschaeftszeiten {position:absolute; margin-left:11px; top:270px; width:200px; height:100px;}
+#apdetails2{position:absolute;left:170px;top:269px; width:300px;font-family:Arial,Helvetica,sans-serif;text-align:right;color:#464646;}
+#apdetails2l{position:relative;left:300px;top:-297px;width:300px;font-family:Arial,Helvetica,sans-serif;text-align:right;color:#464646;}
+
+#worldmap {position:relative;float:left;margin-left:20px;margin-top:23px;border:1px solid #dcdcdc; border-radius:5px;box-shadow: 2px 2px 2px #a8a5a5;}
+#worldmap_description {text-align: center;padding-bottom:5px;}
+
+#kontaktaufnahme{position:relative;left:+20px;}
+/*Infotexte allgemein*/
+.infotext {background-color: #f0f0f0; border: 1px solid #B9B9B9; padding: 10px; margin-left: 2px; margin-top: 18px; font-family: Arial,Helvetica,sans-serif; font-size: 1.0em; color: #004628;}
+
+.but_layout{align: center; font-family:Verdana; font-size:12px; color:#ffffff; background-Color: #004628; text-decoration: none; padding:6px; text-align: center;}
+.but_layout:hover{ Color: #004628; background-Color: #fff1b2; text-decoration: none;}
+
+#weltkarte{position:relative; margin-left:50px;margin-top:25px;}
+.stelle_container{ margin:20px; }
+.stellenangebote-menu{width:95%;border:1px solid #004628;margin:20px;}
+.stellenangebote-menu td{height:35px;padding-left:10px;font-weight:bold;}
+.stellenangebote-menu td.odd{background:#ccc;}
+.stellenangebote-menu td.even{background:#eee;}
+.stelle{ font-size:18px; font-weight: bold; color: #004628; margin:20px 0 10px 0; } 
+.stelle_bereich,.stelle_bereich .field-item, .stelle_bereich .date-display-single{ margin-left:10px; color:#464646; } 
+.stelle_bereich .field-item{ line-height:20px; background:url("images/sprite_base.png") no-repeat scroll -5px -160px transparent; padding-left:14px; } 
+.stelle_bereich .field-item p{ font-size:12px; } 
+.stelle_container .edit{ text-align:right; } 
+.stelle_heading{ font-size:14px; font-weight: bold; color: #004628; margin:10px 0 0px 0; }
+.stelle_zurueck a {font-size:14px; font-weight: bold;background:#ccc;padding:5px;}
+#stelle_auswahl{margin-left:20px;font-size:14px;color:#666;font-weight:bold;margin-top:30px;}
+#contentlinks{font-size:12px;}
+/* Kontakt Auswahl */
+#kontakt_auswahl{padding-top:20px;height:190px;text-align:center;margin-left:153px;}
+#kontakt_auswahl_1{ vertical-align:bottom;padding-right:10px;float:left;width:165px; height:155px; background:url("/template/120913_kontaktaufnahme_telefonisch.png") no-repeat}
+#kontakt_auswahl_1_aktiv,#kontakt_auswahl_1:hover{vertical-align:bottom;padding-right:10px;float:left;width:165px; height:155px;  background:url("/template/120913_kontaktaufnahme_telefonisch_aktiv.png") no-repeat}
+#kontakt_auswahl_2{padding-right:15px; float:left;width:204px; height:155px; background:url("/template/120913_kontaktaufnahme_email.png") no-repeat}
+#kontakt_auswahl_2_aktiv,#kontakt_auswahl_2:hover{padding-right:15px;float:left;width:204px; height:155px;  background:url("/template/120913_kontaktaufnahme_email_aktiv.png") no-repeat}
+#kontakt_auswahl_3{float:left;width:165px; height:155px; background:url("/template/120913_kontaktaufnahme_besuch.png") no-repeat}
+#kontakt_auswahl_3_aktiv,#kontakt_auswahl_3:hover{float:left;width:165px; height:155px;  background:url("/template/120913_kontaktaufnahme_besuch_aktiv.png") no-repeat}
+#kontakt_auswahl_1 h5,#kontakt_auswahl_2 h5,#kontakt_auswahl_3 h5,#kontakt_auswahl_1_aktiv h5,#kontakt_auswahl_2_aktiv h5,#kontakt_auswahl_3_aktiv h5{position:relative;top:155px;font-weight:bold;font-size:13px;}
+/* SKalender */
+#suchlupe_skalender{position:relative;top:3px;left:-3px;}
+#skalenderfilter{border:2px solid #004628}
+#filterkalender{position:relative;height:22px;padding-top:2px;}
+#filterkalender_suche{position:relative;height:18px;padding-top:2px;}
+.skalender_td{width:199px;color:#004628;font-weight:bolder;font-size:14px;vertical-align:top;padding:10px;background-color:rgb(239,239,239)}
+.skalender_td1{width:199px;font-size:12px;padding-left:10px;}
+.skalender_td2{width:192px;color:#004628;vertical-align:top;padding:10px;background-color:rgb(239,239,239)}
+.skalender_td3{width:300px;padding-right:10px;padding:10px;font-weight:normal;vertical-align:top;background-color:rgb(239,239,239); color: #949796;}
+.skalender_td3a{width:300px;padding-right:10px;padding:10px;font-weight:bold;}
+.skalender_td4{width:;font-weight:normal;padding-bottom:20px;padding-top:10px;}
+#skalender_ausgabe{border:0px solid #004628;background:#FFF;left:-22px;position:relative;width:891px;}
+#skalender_ausgabe a{text-decoration:underline}
+#filtern {left:+5px;position:relative;}
+#zertifikate_unternehmen {margin-left:520px; position:absolute;}
+#zertifikate_unternehmen_gb {margin-left:662px; position:absolute;margin-top:-20px;}
+#zertifikate_unternehmen_ru {right:20px; position:absolute; margin-top:-7px;}
+#weltkarte_select {margin-top:20px;}
+.gaw_layout {font-size:1.2em;font-weight:bold;font-family:arial;}
+.gaw_hinweis {background: url(/files/hinweis_gruen.png) no-repeat; width:26px; height:17px;float:left;position:relative;top:3px; left:5px;}
+.bak_but_unternehmen {width: 150px; float:right; margin-right:40px;}
+#map_za {background:url(/files/plz_karte/za_karte.gif) no-repeat;width:285px;height:285px}
+#map_za:hover {background:url(/files/plz_karte/za_karte_aktiv.gif) no-repeat;width:285px;height:285px;}
+#map_in {background:url(/files/plz_karte/in_karte.gif) no-repeat;width:285px;height:285px}
+#map_in:hover {background:url(/files/plz_karte/in_karte_aktiv.gif) no-repeat;width:285px;height:285px;}
+/* Kampangnen*/
+#kampangnen_nameline{position:relative;width:300px;margin-bottom:10px;} 
+#kampangnen_nameline span{display:block;}
+#inhalt #kampangnen_nameline h1{line-height:18px;}
+/*#kampangnen_navi{margin-left:400px;width:354px;height:18px; border:dashed;background:url("/files/354x28px_wos_gscheids_kampagnennavipfeil.png") no-repeat}*/
+#kampangnen_navi{margin-left:273px;width:354px;height:18px; background:url("/files/354x28px_wos_gscheids_kampagnennavipfeil.png") no-repeat;}
+
+#kampangnen_navi2 { width: 795px; height: 170px; position: relative;background-color:#8b8b8b; z-index:999;}
+.kampangnen_navi_left{margin-left:15px;margin-top:12px; background-color:#FFF;}
+.kampangnen_navi_left2{margin-left:15px; background-color:#FFF;}
+.kampangnen_navi_picture{background-color:#FFF;}
+.kampangnen_navi_left:hover,.kampangnen_navi_left2:hover,.kampangnen_navi_picture:hover{opacity:0.7;}
+.toggler { width: 795px; height: 165px; position:absolute;}
+#effect { width: 795px; height: 187px; left:50px; top:-18px; position: relative; z-index:999;}
+#effect h3 { margin: 0; padding: 0.4em; text-align: center;}  
+section.slider{top:0px;position:relative;left:50%;margin-left:-344px;}
+
+#seminarfilter{width:97.9%; background-color:#5cba93; margin-left: -2px;}
+#seminarfilter input{background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #666666;height: 22px;width:120px;margin-right:10px;}
+#seminarfilter select{ height: 20px;}
+#seminarfilter label{color:#fff;width:100px; display:inline-block;}
+#seminarfilter td{line-height:21px;}
+
+/* Produkt des Monats*/
+#pdm_links{width:325px;float:left;font-family:Verdana;}
+#pdm_rechts
+{width:527px;float:right;padding-top:70px;font-family:Verdana;font-size:12px;}
+#pdm_nameline
+{font-size:17px;color:#004628;}
+#pdm_name
+{font-size:22px;color:#004628;font-weight:bold;}
+
+#pdm_links h1, #pdm_rechts h1
+{font-family:Verdana;}
+#pdm_praemien{position:relative;top:-2px;width:800px;height:300px;}
+
+#a950_table
+{padding-left:200px;padding-top:50px;cellspacing:10px;font-size:11pt;}
+
+.a950_input_disabled
+{border:0px;background-color:#fff;color:#464646;font-size:11pt;}
+.a950_left
+{font-weight:bold;vertical-align:top;}
+#trauerband
+{margin-top:-27px;margin-left:+367px;width:214px;height:215px;background-image:url("https://www.schletter.eu/files/trauerband.png");z-index:9999;}
+
+.semi_backlink{float: right; height: 20px; margin-right: 39px; margin-top: -47px; z-index:1000; position:relative;}
+
+#newsletter_email,#newsletter_email2
+{margin-right:380px;float:right;}
+
+.faq-bg-all{width: 850px;padding: 0.5em 0.5em 0.5em 0.7em;background-color: #e6e6e6;font-weight: bold;font-size: 1.2em;border-bottom:1px solid #000;}
+.faq-open div{border-left: 1px solid #dcdcdc;border-right: 1px solid #dcdcdc;}
+.faq-open h3{text-shadow: 0.1em 0.1em 0.1em  #d7d7d7;}
+
+
+.formtext .formlabel-bgf,#bgf_rechte_spalte h4 p{width:500px;margin-bottom:2px;}
+#bgf_rechte_spalte{position:relative;width:500px;}
+#bgf_rechte_spalte .text, #bgf_rechte_spalte .select{width:220px;}
+
+/* Formular */
+#form_fieldset{margin-left:100px;width:250px;border:0px;}
+
+.formgen_block{margin-top:5px;}
+.formgen_block input{float:right;}
+.formgen_block :active{border-color:#004628;}
+
+#verlosung{top:-300px; margin-left:+410px; width:400px; position:relative;}
+.formgen_block  #element7, .formgen_block  #element8 {float:left; margin-right:5px; margin-top:3px;}
+
+/* BUTTONS */
+#ok_but {text-align:center; margin-top:-14px;}
+
+/* SONDER STYLES */
+.link_referenz {position: relative; float: right; border-radius: 2px; background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #004628 0%, #008149 50%, #008149 100%) repeat scroll 0 0; text-align:center; padding:0 5px; 0 5px; margin-right:5px;}
+.link_referenz p {color: white; font-weight: bold;}
+.link_referenz p:hover {opacity: 0.8;}
+/* SEMINARREZENSIONEN */
+#contentline {margin-left:20px; width:859px;}
+#accordion h3 {font-weight:bold; color:#004628; margin-bottom:19px; width: 828px;}
+.line-date {padding-right:2px; color:#a2a2a2; float:right; margin-right:15px;}
+.line-name {font-weight:bold; padding-left:2px; margin-top:3px; padding-bottom:3px; color: #a2a2a2;}
+.line-text {padding-left:5px; margin-bottom:20px; font-style:italic; border:1px solid #c1c1c1; min-height: 40px; width:820px;}
+#accordion h3 span {font-size:0.8em; font-weight:normal; color:#848484;}
+
+/* Download Styles */
+.dl_version_date {font-size:0.9em; float:right; margin-right:20px;}
+
+/* French ETN Hinweis*/
+p.french-etn {margin-top:20px; position:relative; width:800px; color:red; font-size:1.2em; letter-spacing:1px;}
+p.french-etn a:link {color:red;}
+p.french-etn a:visited {color:red;}

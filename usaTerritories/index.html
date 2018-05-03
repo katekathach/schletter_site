@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>LGMap - Responsive Javascript Map</title>
+  <meta name="description" content="LGMap - Responsive Javascript Map - http://jsmaps.io">
+  <meta name="author" content="LGLab">
+
+  <!-- Demo scripts -->
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: 'Droid Sans', sans-serif;
+      background:#f2f2f2;
+      font-size:14px;
+      line-height:21px;
+    }
+
+    .container {
+      width: 1250px;
+      margin:20px auto;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1000px) {
+      .container {
+        width: 768px;
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .container {
+        width: 420px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .container {
+        width: 300px;
+      }
+    }
+
+    a img {
+      border:none;
+    }
+
+    h1, h2, h3, h4, h5, h6{ 
+      font-weight:normal; 
+    }
+    h1{ 
+      font-size:26px; 
+      line-height:32px; 
+    }
+    p, ul{
+      margin-bottom:10px;
+    }
+
+  </style>
+  <!-- End Demo scripts -->
+
+  <!-- Jquery is required, embed on your page if not already - don't embed 2 versions -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <!-- End Jquery -->
+
+  <!-- Map scripts - add the below to your page -->
+  <!-- lg-map-panzoom.js is optional if you are using enablePanZoom -->
+ <!-- <link href="lg-map/lg-map.css" rel="stylesheet" type="text/css" />
+  <script src="lg-map/lg-map-libs.js" type="text/javascript"></script>
+  <script src="lg-map/lg-map-panzoom.js"></script>
+  <script src="lg-map/lg-map.min.js" type="text/javascript"></script>
+  <!-- End Map scripts -->
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Map html - add the below to your page -->
+    <!--<div class="lg-map-wrapper" id="usaTerritories-map"></div>-->
+    <!-- End Map html -->
+
+  </div>
+
+  <!--<script type="text/javascript">
+
+    $(function() {
+      
+      $('#usaTerritories-map').LGMap({
+       map: 'usaTerritories',
+       strokeColor: "#ddd",  
+       Color: "#aaa",    
+       responsive: true,
+       displayAbbreviations : true,
+       enablePanZoom: true,
+       onStateClick: function(data) {
+       //console.log(data);
+       getSalesRep(data)
+       // A state/region has been clicked, data is passed to the listener which includes all data defined for the state/region in maps/{mapName}.js
+        },
+      });
+
+      function getSalesRep(state){
+      var sale;
+
+      if(state.name == "California"){
+        sale = '<div class="col-sm-6 col-xs-6" style="display:inline-block"><h1>Northern ' + state.name + '</h1><br><img src="'+  state.saleRepNorth.imgurl + '" alt=""/><span><strong style="font-weight:600">'+ state.saleRepNorth.name +'</strong><br/>Sales Representative ' + 
+       '<a href="mailto:'+ state.saleRepNorth.email +'">' + state.saleRepNorth.email + '</a>'+ state.saleRepNorth.phone +'<br/>'+ state.saleRepNorth.cell +' <br/>' + 
+       '<a title="" class="vcard" href="support/"><img class="vcard-hover" src="" /></a></span></div>'  +
+       '<div class="col-sm-6 col-xs-6" style="display:block"><h1>Southern ' + state.name + '</h1><br/><img src="'+  state.saleRepSouth.imgurl + '" alt=""/><span><strong style="font-weight:600">'+ state.saleRepSouth.name +'</strong><br/>Sales Representative<br/>' + 
+       '<a href="mailto:'+ state.saleRepSouth.email +'">' + state.saleRepSouth.email + '</a> <br/>' + 
+       '<a title="" class="vcard" href="support/"><img class="vcard-hover" src="" /></a></span></div>';         
+      }else{
+        sale = '<div class="col-sm-6 col-xs-6" style="display:inline-block"><h1>' + state.name + '</h1><br><img src="'+  state.saleRep.imgurl + '" alt=""/><span><strong style="font-weight:600">'+ state.saleRep.name +'</strong><br/>Sales Representative ' + 
+       '<a href="mailto:'+ state.saleRep.email +'">' + state.saleRep.email + '</a> <br> '+ state.saleRep.phone +'<br/> '+ state.saleRep.cell +' <br/>' + 
+       '<a title="" class="vcard" href="support/"><img class="vcard-hover" src="" /></a></span></div>';  
+      }
+       var integ =  '<div class="col-sm-6 col-xs-6" style="margin-top:10px"><img src="'+  state.integrator.imgurl + '"  width="127" alt=""/><span><strong style="font-weight:600">'+ state.integrator.name +'</strong><br/>Project Integrator <br>' + 
+       '<a href="mailto:'+ state.integrator.email +'">' + state.integrator.email + '</a><br><p>'+ state.integrator.phone+'<br/>'+state.integrator.cell + 
+       '</p><a title="" class="vcard" href="support/"><img class="vcard-hover" src="" /></a></span></div>';
+       
+       /* var  sales= '<div class="col-sm-6 col-xs-6" style="display:inline-block">Northern California<br><img src="'+  state.saleRepNorth.imgurl + '" alt=""/><span><strong style="font-weight:600">'+ state.saleRepNorth.name +'</strong><br/>Sales Representative ' + 
+       '<a href="mailto:'+ state.saleRepNorth.email +'">' + state.saleRepNorth.email + '</a> <br> P: '+ state.saleRepNorth.phone +'<br/>C: '+ state.saleRepNorth.cell +' <br/>' + 
+       '<a title="" class="vcard" href="support/"><img class="vcard-hover" src="" /></a></span></div>' ;*/
+  
+
+         $(".lg-map-text").html(sale + integ);
+
+      }
+
+    });
+    
+  </script>-->
+  
+</body>
+
+</html>

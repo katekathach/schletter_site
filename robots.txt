@@ -1,0 +1,6 @@
+Sitemap: http://www.schletter.us/sitemap.xml
+User-agent: * # match all bots
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
+Disallow: /private/
